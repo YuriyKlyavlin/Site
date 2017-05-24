@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<html>
+	<head>
+		<link href = "styles/style.css" rel = "stylesheet">
+		<script src="raphael.min.js"></script>
+		<script>
+            window.onload = function(){
+                var p = Raphael(0,0,400,400);
+                
+
+                p.rect(20,70,50,50)
+                .attr({
+                        fill : "red",
+                        stroke : "none",
+                        cursor : "pointer"
+                    })
+                .click(function()
+                    {
+                        this.attr({fill : "blue"});
+                    })
+                .hover(function()
+                    {
+                        this.attr({fill : "green"});
+                    },
+                function()
+                    {
+                        this.attr({fill : "red"});
+                    });
+                p.circle(100,100,30)
+                .attr({
+                        "stroke-width" : 10,
+                        fill : "90-#f00-#000"
+                    })
+                .animate({
+                    cx : 300,
+                    transform : "s2"
+                }, 3000, "elastic");
+                p.rect(200,250,50,50)
+                .attr({
+                    fill : "orange"
+                })
+                .animate({
+                    transform : "r180",
+                    fill : "blue"
+                },3000);
+                p.text (50,250,"Hello there!")
+                .attr({
+                    "font-family" : "Georgia",
+                    "font-size" : 20
+                })
+                .animate({
+                    y : 350
+                },3000, "elastic");
+
+            };
+        </script>
+		<title>Hello HTML!</title>
+	</head>
+
+	<h1>Cats news!!!</h1>
+	
+	<p class a>Paragraph</p>
+
+	<body>
+		Hello HTML!
+	</body>
+</HTML>
